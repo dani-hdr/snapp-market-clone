@@ -7,7 +7,7 @@ const ProductItem:React.FC = () => {
         <a href="#">
             <figure dir='rtl' className='flex flex-col  justify-between gap-4'>
                  <picture className='self-center '>
-                    <Image className="group-hover:scale-110 transition-all" alt='' src={'/images/products/product1.jpg'} width={150} height={30}/>
+                    <Image className="group-hover:scale-110 transition-all" alt='' src={'/images/products/product1.jpg'} width={150} height={150}/>
                  </picture>
                  <figcaption>
                     <h2 className='text-slate-600 tracking-tight text-md'>شامپو بدن Relax بوتانیس ۴۰۰ میلی لیتری</h2>
@@ -25,7 +25,7 @@ const ProductItem:React.FC = () => {
                         </div>
                     </div>
 
-                    <button className='px-3 py-2 min-w-max border rounded-full text-sm text-blue-600 hover:bg-blue-600 hover:text-white'>افزودن به سبد</button>
+                    <button className='btn btn-sm font-normal btn-primary btn-outline rounded-full'>افزودن به سبد</button>
                  </footer>
             </figure>
         </a>

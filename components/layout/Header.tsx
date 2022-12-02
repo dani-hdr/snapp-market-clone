@@ -4,7 +4,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import { AiOutlineUser, AiOutlineClockCircle } from "react-icons/ai";
 import { BiShoppingBag,BiCategory } from "react-icons/bi";
 import { MdLocalShipping } from "react-icons/md";
-import Button from './../UI/Button';
 import SearchInput from './../UI/SearchInput';
 import Container from "./Container";
 
@@ -17,7 +16,7 @@ const Header: React.FC = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-      className=" pt-2 pb-5 mb-7"
+      className=" pt-2 pb-5 "
     >
       <Container >
         {/* Top header */}
@@ -31,7 +30,7 @@ const Header: React.FC = () => {
               className=""
               src={"/images/logo.png"}
             />
-            <button className="flex items-center   text-white text-xs hover:text-slate-400">
+            <button className="flex items-center  text-white text-xs hover:text-slate-400">
               <TfiLocationPin />
               <span className="mx-2">
                 تهران، جمال زاده ، آزادی تقاطع کارگر جنوبی، بانک ...
@@ -46,11 +45,11 @@ const Header: React.FC = () => {
               <span className="mr-2">ورود / عضویت</span>
             </button>
 
-            <Button bgColor="bg-white" color="text-blue-500">
+            <button className="btn gap-2 bg-white hover:bg-white text-blue-600 ">
               <BiShoppingBag size={20} />
               <span >سبد خرید </span>
               <span className="px-2 font-bold bg-blue-50 rounded-full">2</span>
-            </Button>
+            </button>
           </div>
         </div>
 
@@ -69,13 +68,13 @@ const Header: React.FC = () => {
               <span className="text-white">
                 خرید از <strong>هایپراستار صبا</strong>
               </span>
-              <button className="bg-white flex items-center py-1 px-2 rounded-full text-blue-500 text-xs">
+              <button className="btn btn-xs bg-white hover:bg-white text-xs font-normal rounded-full  text-blue-500 ">
                 تغییر فروشگاه
                 <IoIosArrowDown className="mr-1"/>
               </button>
             </div>
             <div className="flex gap-2 items-center">
-              <Button bgColor="bg-white" color="text-slate-600"><BiCategory size={20} className="ml-1"/> دسته بندی ها</Button>
+              <button className="btn text-slate-600 font-normal bg-white hover:bg-white"><BiCategory size={20} className="ml-1"/> دسته بندی ها</button>
               <SearchInput/>
             </div>
           </div>

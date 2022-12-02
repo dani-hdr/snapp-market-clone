@@ -18,7 +18,7 @@ const ProductSilderPrimary = () => {
         
         modules={[Navigation]}
         spaceBetween={10}
-        slidesPerView={5}
+        slidesPerView={4}
         navigation={true}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
