@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
 
-const ProductItem:React.FC = () => {
+type Props =  {
+    rounded?:boolean
+}
+const ProductItem = ({rounded} : Props ) => {
   return (
-    <div  className='p-4  bg-white  rounded-md group hover:shadow-md transition-all'>
+    <div  className={`p-4 border ${rounded && 'rounded-md'}   bg-white    group hover:shadow-xl transition-all`}>
         <a href="#">
             <figure dir='rtl' className='flex flex-col  justify-between gap-4'>
                  <picture className='self-center '>

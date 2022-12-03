@@ -25,25 +25,25 @@ const ProductSilderPrimary = () => {
       >
        
         <SwiperSlide>
-          <ProductItem />
+          <ProductItem rounded />
         </SwiperSlide>
         <SwiperSlide>
-          <ProductItem />
+          <ProductItem rounded />
         </SwiperSlide>
         <SwiperSlide>
-          <ProductItem />
+          <ProductItem rounded />
         </SwiperSlide>
         <SwiperSlide>
-          <ProductItem />
+          <ProductItem  rounded/>
         </SwiperSlide>
         <SwiperSlide>
-          <ProductItem />
+          <ProductItem rounded/>
         </SwiperSlide>
         <SwiperSlide>
-          <ProductItem />
+          <ProductItem rounded/>
         </SwiperSlide>
         <SwiperSlide>
-          <ProductItem />
+          <ProductItem rounded/>
         </SwiperSlide>
        
         
