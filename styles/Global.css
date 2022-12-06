@@ -8,8 +8,7 @@ html {
   direction: rtl;
 }
 body{
-  background: rgb(249, 245, 245);
-  padding-bottom: 5rem; 
+  background: rgb(249, 245, 245); 
 }
 
 @font-face {
