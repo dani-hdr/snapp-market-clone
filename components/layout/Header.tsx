@@ -10,7 +10,7 @@ import Container from "./Container";
 const Header: React.FC = () => {
   return (
     <header
-      dir="rtl"
+     
       style={{
         backgroundImage: "url('/images/heroBackground.jpg')",
         backgroundPosition: "center",
@@ -20,9 +20,9 @@ const Header: React.FC = () => {
     >
       <Container >
         {/* Top header */}
-        <div className="flex justify-between items-center  border-b border-slate-400 border-opacity-20 ">
+        <div className="flex items-center justify-between  border-b border-slate-400 border-opacity-20  ">
           {/* Righ side */}
-          <div className="flex gap-5">
+          <div className="flex gap-5 ">
             <Image
               alt="logo"
               width={70}
@@ -30,23 +30,23 @@ const Header: React.FC = () => {
               className=""
               src={"/images/logo.png"}
             />
-            <button className="flex items-center  text-white text-xs hover:text-slate-400">
-              <TfiLocationPin />
-              <span className="mx-2">
-                تهران، جمال زاده ، آزادی تقاطع کارگر جنوبی، بانک ...
+            <button className="flex items-center  w-56 md:w-xl  text-white text-xs hover:text-slate-400">
+              <TfiLocationPin size={40} />
+              <span className="mx-2  truncate ">
+              تهران، جمال زاده ، آزادی تقاطع کارگر جنوبی، بانک تهران، جمال زاده ، آزادی تقاطع کارگر جنوبی، بانک 
               </span>
-              <IoIosArrowDown size={20} />
+              <IoIosArrowDown size={45} />
             </button>
           </div>
           {/* Left side */}
-          <div className="flex items-center gap-4 ">
-            <button className="flex items-center text-white hover:text-slate-400 cursor-pointer">
+          <div className=" flex items-center  gap-4  ">
+            <button className="flex  items-center text-white hover:text-slate-400 cursor-pointer">
               <AiOutlineUser size={25} />
-              <span className="mr-2">ورود / عضویت</span>
+              <span className="mr-2 hidden md:block">ورود / عضویت</span>
             </button>
 
-            <button className="btn gap-2 bg-white hover:bg-white text-blue-600 ">
-              <BiShoppingBag size={20} />
+            <button className="hidden md:inline-flex btn gap-2 bg-white hover:bg-white text-blue-600 ">
+              <BiShoppingBag  size={20} />
               <span >سبد خرید </span>
               <span className="px-2 font-bold bg-blue-50 rounded-full">2</span>
             </button>
@@ -54,18 +54,18 @@ const Header: React.FC = () => {
         </div>
 
         {/* Bottom header */}
-        <div className="flex mt-5 items-center justify-between">
-          {/* Right side */}
-          <div className="flex w-2/5  flex-col  gap-4">
+        <div className="flex flex-col mt-5  justify-center">
+          {/* Top side */}
+          <div className="flex  flex-col md:flex-row md:justify-between  gap-4 border-b md:border-none border-slate-400 border-opacity-20 pb-4">
             <div className="flex items-center gap-4 ">
               <Image
                 className="rounded-full"
                 alt=""
-                width={60}
-                height={60}
+                width={40}
+                height={40}
                 src={"/images/hyper.jpg"}
               />
-              <span className="text-white">
+              <span className="text-white text-md">
                 خرید از <strong>هایپراستار صبا</strong>
               </span>
               <button className="btn btn-xs bg-white hover:bg-white text-xs font-normal rounded-full  text-blue-500 ">
@@ -73,21 +73,24 @@ const Header: React.FC = () => {
                 <IoIosArrowDown className="mr-1"/>
               </button>
             </div>
-            <div className="flex gap-2 items-center">
-              <button className="btn text-slate-600 font-normal bg-white hover:bg-white"><BiCategory size={20} className="ml-1"/> دسته بندی ها</button>
-              <SearchInput/>
-            </div>
-          </div>
-          {/* Left side */}
-          <div className="flex gap-4 flex-col text-xs text-white">
-            <span className="flex items-center">
-              <AiOutlineClockCircle size={20} className="ml-2" /> تحویل از امروز
+            <div className="flex md:flex-col gap-4 items-start   frot-light text-white text-xs md:text-md leading-5">
+            <span className="flex items-center ">
+              <AiOutlineClockCircle  size={20} className="hidden " /> تحویل از امروز
+              
               ساعت 18:00
             </span>
-            <span className="flex items-center">
-              <MdLocalShipping size={20} className="ml-2" /> ارسال رایگان برای
+            
+            <span className="flex   items-center ">
+              <MdLocalShipping size={20} className="hidden" /> ارسال رایگان برای
               سفارش بالای 200000 تومان
             </span>
+            </div>
+          </div>
+          {/* Bot side */}
+          <div className="flex md:w-1/2 gap-4 mt-4 text-xs text-white">
+          <button className="hidden md:inline-flex btn text-slate-600 font-normal bg-white hover:bg-white"><BiCategory size={20} className="ml-1"/> دسته بندی ها</button>
+              <SearchInput/>
+           
           </div>
         </div>
       </Container>

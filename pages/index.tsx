@@ -5,9 +5,12 @@ import ProductSilderPrimary from "../components/Products/ProductSilderPrimary";
 import CategoryCoordian from "../components/category/CategoryCoordian";
 import ProductSlider from "./../components/Products/ProductSlider";
 import Footer from "../components/layout/Footer";
+import Navigation from "../components/layout/Navigation";
+import CategoryMenu from "../components/layout/CategoryMenu";
 const Home: React.FC = () => {
   return (
     <>
+   
       <Header />
       <Container>
         <section className="mt-7">
@@ -68,6 +71,8 @@ const Home: React.FC = () => {
         </section>
       </Container>
       <Footer/>
+      <Navigation/>
+      <CategoryMenu/>
     </>
   );
 };
