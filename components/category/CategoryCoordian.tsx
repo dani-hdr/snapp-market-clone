@@ -4,8 +4,9 @@ import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import CategoryBox from "./CategoryBox";
 
 const CategoryCoordian: React.FC = () => {
+  const defaultCategoryItems = 8;
   const [showMore, setShowMore] = useState<boolean>(true);
-  const [visibleItems, setVisibleItems] = useState<number>(4);
+  const [visibleItems, setVisibleItems] = useState<number>(defaultCategoryItems);
   const categoryData: {
     bgColor: "white" | "red" | "blue";
     title: string;
@@ -69,46 +70,46 @@ const CategoryCoordian: React.FC = () => {
         "https://api.snapp.market/uploads/images/mobile-sliders/61e6a5d4ab909.png",
       link: "#",
     },
+    {
+      bgColor: "white",
+      title: "دستمال و شوینده",
+      discount: 27,
+      imageUrl:
+        "https://api.snapp.market/uploads/images/mobile-sliders/61e6a5d4ab909.png",
+      link: "#",
+    },
+    {
+      bgColor: "white",
+      title: "دستمال و شوینده",
+      discount: 27,
+      imageUrl:
+        "https://api.snapp.market/uploads/images/mobile-sliders/61e6a5d4ab909.png",
+      link: "#",
+    },
+    {
+      bgColor: "white",
+      title: "دستمال و شوینده",
+      discount: 27,
+      imageUrl:
+        "https://api.snapp.market/uploads/images/mobile-sliders/61e6a5d4ab909.png",
+      link: "#",
+    },
   ];
 
   const handleShow = (): void => {
     setShowMore(!showMore);
     console.log(showMore);
     if (showMore) setVisibleItems(30);
-    else setVisibleItems(4);
+    else setVisibleItems(defaultCategoryItems);
   };
   return (
-    <>
-      <div className="grid grid-cols-3   gap-3">
-        {" "}
-        <CategoryBox
-          bgColor="blue"
-          title="دستمال و شوینده"
-          discount={27}
-          imageUrl="https://api.snapp.market/uploads/images/mobile-sliders/61e6a5d4ab909.png"
-          link="#"
-        />
-        <CategoryBox
-          bgColor="red"
-          title="دستمال و شوینده"
-          discount={27}
-          imageUrl="https://api.snapp.market/uploads/images/mobile-sliders/61e6a5d4ab909.png"
-          link="#"
-        />
-        <CategoryBox
-          bgColor="blue"
-          title="دستمال و شوینده"
-          discount={27}
-          imageUrl="https://api.snapp.market/uploads/images/mobile-sliders/61e6a5d4ab909.png"
-          link="#"
-        />
-      </div>
-      <div >
-        <div className="grid grid-cols-4  gap-3 mt-4 transition-all ">
+    
+      < >
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-3 mt-4 lg:nth-child-3:bg-red-400  ">
           {categoryData.slice(0, visibleItems).map((data) => (
             <CategoryBox
               key={Math.random()}
-              bgColor={data.bgColor}
+
               discount={data.discount}
               link={data.link}
               title={data.title}
@@ -129,8 +130,8 @@ const CategoryCoordian: React.FC = () => {
           <AiOutlineArrowUp/> نمایش موارد کمتر
         </button>}
         </div>
-      </div>
-    </>
+      </>
+ 
   );
 };
 

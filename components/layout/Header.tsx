@@ -1,3 +1,5 @@
+import {useEffect,useContext} from 'react'
+import { MenuConext } from '../../context/MenuContext';
 import Image from "next/image";
 import { TfiLocationPin } from "react-icons/tfi";
 import { IoIosArrowDown } from "react-icons/io";
@@ -7,7 +9,20 @@ import { MdLocalShipping } from "react-icons/md";
 import SearchInput from './../UI/SearchInput';
 import Container from "./Container";
 
+import DesktopMenu from "./DesktopMenu";
+
 const Header: React.FC = () => {
+
+  const [showMenu,setShowMenu] = useContext(MenuConext)
+  console.log(showMenu)
+  useEffect(()=>{
+   if(showMenu){
+     document.body.style.overflow="hidden"
+  }else {
+     document.body.style.overflow="scroll"
+  }
+  },[showMenu])
+  
   return (
     <header
      
@@ -87,10 +102,10 @@ const Header: React.FC = () => {
             </div>
           </div>
           {/* Bot side */}
-          <div className="flex md:w-1/2 gap-4 mt-4 text-xs text-white">
-          <button className="hidden md:inline-flex btn text-slate-600 font-normal bg-white hover:bg-white"><BiCategory size={20} className="ml-1"/> دسته بندی ها</button>
+          <div className="relative flex  gap-4 mt-4 text-xs text-white">
+          <button onClick={()=> setShowMenu(!showMenu)} className="hidden md:inline-flex btn text-slate-600 font-normal bg-white hover:bg-white"><BiCategory size={20} className="ml-1"/> دسته بندی ها</button>
               <SearchInput/>
-           
+           <DesktopMenu/>
           </div>
         </div>
       </Container>

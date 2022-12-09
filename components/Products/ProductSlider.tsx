@@ -22,7 +22,7 @@ const ProductSlider = ({title,productsUrl,showMoreUrl}:Props) => {
       <Swiper
         modules={[Navigation]}
         spaceBetween={0}
-        slidesPerView={5}
+        width={250}
         navigation={true}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}

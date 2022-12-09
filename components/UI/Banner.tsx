@@ -7,7 +7,7 @@ interface Props {
 }
 const Banner:React.FC<Props> = ({imageUrl,title,link}) => {
   return (
-    <div>
+    <div className='hidden md:block'>
         <a title={title} href={link}>
             <picture>
                 <Image className='rounded-md' alt={title} width={1924} height={134} src={imageUrl}/>

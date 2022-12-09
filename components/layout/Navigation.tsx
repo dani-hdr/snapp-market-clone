@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useContext} from 'react'
 import {MenuConext} from '../../context/MenuContext'
 
 const Navigation = () => {
 
  const [showMenu,setShowMenu] = useContext(MenuConext)
- if(showMenu){
+ useEffect(()=>{
+  if(showMenu){
     document.body.style.overflow="hidden"
  }else {
     document.body.style.overflow="scroll"
  }
+ },[showMenu])
+
   return (
     <div className='fixed md:hidden px-12 py-8  w-full bottom-0 z-20 bg-white border-t'>
         <div className="flex justify-between text-slate-600 text-sm font-bold">
