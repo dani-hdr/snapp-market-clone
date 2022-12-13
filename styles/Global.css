@@ -12,6 +12,10 @@ body{
   
 }
 
+.swiper-slide {
+  width: 265px !important;
+}
+
 
 
 @font-face {

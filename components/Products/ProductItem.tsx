@@ -6,7 +6,7 @@ type Props =  {
 }
 const ProductItem = ({rounded} : Props ) => {
   return (
-    <div  className={`p-4 border ${rounded && 'rounded-md'}   bg-white    group hover:shadow-xl transition-all`}>
+    <div  className={`p-4 border ${rounded && 'rounded-md'}    bg-white    group hover:shadow-xl transition-all`}>
         <a href="#">
             <figure dir='rtl' className='flex flex-col  justify-between gap-4'>
                  <picture className='self-center '>

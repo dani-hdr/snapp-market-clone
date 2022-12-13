@@ -1,4 +1,5 @@
 import "../styles/Global.css";
+import "swiper/css/bundle";
 import type { AppProps } from "next/app";
 import MenuContext from "../context/MenuContext";
 
