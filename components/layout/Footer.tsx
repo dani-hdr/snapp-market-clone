@@ -8,10 +8,10 @@ import { GiJigsawBox,GiBasket } from "react-icons/gi";
 const Footer = () => {
   return (
   
-     <footer className="bg-white mt-7 py-6 min-h-screen">
+     <footer className="bg-white mt-7 py-6 min-h-screen pb-48 md:pb-4">
       <Container>
         {/* top footer */}
-        <div className="flex justify-between">
+        <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-3">
           <div className="flex flex-col gap-2 justify-center items-center">
             <div className="p-5 border w-20 h-20 rounded-md text-center text-primary">
               <TbDiscount2 size={40} />
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
         {/* app download */}
-        <div className="flex justify-between  mt-10 border-b">
+        <div className="flex justify-between items-center  mt-10 border-b pb-4">
           <div className="flex flex-col gap-4">
             <h4 className="font-bold">دانلود اپلیکیشن</h4>
             <span className="text-slate-500 text-sm">
@@ -76,23 +76,23 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="flex ">
+          <div className="flex hidden md:flex ">
             <img
-              className="h-52 -ml-28"
+              className="h-32 lg:h-52 -ml-16"
               src="https://snapp.market/v2/static/images/newMobile-2.84a4e251.png"
               alt=""
             />
             <img
-              className="h-52"
+              className="h-32 lg:h-52"
               src="https://snapp.market/v2/static/images/newMobile-1.4a44f07a.png"
               alt=""
             />
           </div>
         </div>
         {/* bottom footer */}
-        <div className="mt-10">
-          <div className="flex gap-3 justify-between">
-            <div className="w-1/4">
+        <div className="mt-10 ">
+          <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+            <div className="col-span-full md:col-span-1">
               <h4 className="font-bold mb-4 ">درباره ما</h4>
               <p className="text-sm text-slate-500 leading-8">
                 اسنپ مارکت حاصل همکاری دو شرکت بزرگ اسنپ و‌هایپراستار است تا
@@ -100,7 +100,7 @@ const Footer = () => {
                 هایپر استار | مایلی
               </p>
             </div>
-            <div className="w-1/4">
+            <div className="">
               <h4 className="font-bold mb-4">دسترسی‌ها</h4>
               <div>
                 <ul className="flex flex-col gap-2 text-sm text-slate-500 leading-7">
@@ -126,7 +126,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="w-1/4">
+            <div className="">
               <h4 className="font-bold mb-4">تماس با ما</h4>
               <ul className="flex flex-col gap-2 text-sm text-slate-500 leading-7">
                 <li>
@@ -149,28 +149,28 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex gap-2 w-1/4">
-              <div className="border w-28 h-28 p-3 rounded-md shadow-md">
-                <img
+            <div className="flex justify-evenly  gap-2  col-span-full lg:col-span-1">
+              <div className="border  w-1/6 lg:w-full  h-min   p-3 rounded-md shadow-md">
+                <img className="w-full"
                   src="https://snapp.market/v2/static/images/ecunion.70a7f898.png"
                   alt=""
                 />
               </div>
-              <div className="border w-28 h-28 p-3 rounded-md shadow-md">
-                <img
+              <div className="border  w-1/6 lg:w-full  h-min  p-3 rounded-md shadow-md">
+                <img className="w-full"
                   src="https://snapp.market/v2/static/images/ecunion.70a7f898.png"
                   alt=""
                 />
               </div>
-              <div className="border w-28 h-28 p-3 rounded-md shadow-md">
-                <img
+              <div className="border  w-1/6 lg:w-full  h-min  p-3 rounded-md shadow-md">
+                <img className="w-full"
                   src="https://snapp.market/v2/static/images/ecunion.70a7f898.png"
                   alt=""
                 />
               </div>
             </div>
           </div>
-          <div></div>
+         
         </div>
       </Container>
     </footer>
