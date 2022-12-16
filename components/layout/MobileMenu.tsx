@@ -5,13 +5,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 const MobileMenu = () => {
 
   const [showMenu,setShowMenu] = useContext(MenuConext)
-  useEffect(()=>{
-    if(showMenu){
-      document.body.style.overflow="hidden"
-   }else {
-      document.body.style.overflow="scroll"
-   }
-   },[showMenu])
+
   return (
     <div className={`p-5 w-80 fixed md:hidden lg top-0 bottom-0 right-0 transition-transform  ${showMenu ? ' ' : 'translate-x-96'}  bg-white z-10 `}>
       <div className=" flex justify-between top-5">

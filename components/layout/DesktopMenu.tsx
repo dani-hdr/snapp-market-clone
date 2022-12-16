@@ -4,8 +4,10 @@ import { MenuConext } from '../../context/MenuContext'
 const DesktopMenu = () => {
 
     const [showMenu] = useContext(MenuConext)
+
   return (
-    <div className={`${showMenu ? 'md:block' : 'hidden'} hidden    absolute bg-white p-10 z-10 top-14 left-0 right-0   shadow-md`}>
+    
+      <div className={`${showMenu ? 'md:block' : 'hidden'} hidden  absolute bg-white p-10 z-20 top-14 left-0 right-0   shadow-md`}>
           <ul className="grid grid-cols-4 gap-5 list-disc ">
           <li className="group ">
             <a href="" className="flex flex-col">
@@ -18,6 +20,8 @@ const DesktopMenu = () => {
          
         </ul>
     </div>
+
+    
   )
 }
 

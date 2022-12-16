@@ -8,20 +8,22 @@ import { BiShoppingBag,BiCategory } from "react-icons/bi";
 import { MdLocalShipping } from "react-icons/md";
 import SearchInput from './../UI/SearchInput';
 import Container from "./Container";
-
 import DesktopMenu from "./DesktopMenu";
+import useWindowDimensions from './../../hooks/useWindowDimension';
+import Overlay from './Overlay'
 
 const Header: React.FC = () => {
 
   const [showMenu,setShowMenu] = useContext(MenuConext)
-  console.log(showMenu)
+  const { width } = useWindowDimensions();
+
   useEffect(()=>{
-   if(showMenu){
+   if(showMenu && (width!=undefined && width < 768)){
      document.body.style.overflow="hidden"
   }else {
      document.body.style.overflow="scroll"
   }
-  },[showMenu])
+  },[showMenu,width])
   
   return (
     <header
@@ -33,6 +35,7 @@ const Header: React.FC = () => {
       }}
       className=" pt-2 pb-5 "
     >
+      {showMenu && <Overlay onClick={()=>setShowMenu(false) }/>}
       <Container >
         {/* Top header */}
         <div className="flex items-center justify-between  border-b border-slate-400 border-opacity-20  ">
@@ -103,7 +106,7 @@ const Header: React.FC = () => {
           </div>
           {/* Bot side */}
           <div className="relative flex  gap-4 mt-4 text-xs text-white">
-          <button onClick={()=> setShowMenu(!showMenu)} className="hidden md:inline-flex btn text-slate-600 font-normal bg-white hover:bg-white"><BiCategory size={20} className="ml-1"/> دسته بندی ها</button>
+          <button onClick={()=> setShowMenu(!showMenu)} className="hidden z-20 md:inline-flex btn text-slate-600 font-normal bg-white hover:bg-white"><BiCategory size={20} className="ml-1"/> دسته بندی ها</button>
               <SearchInput/>
            <DesktopMenu/>
           </div>

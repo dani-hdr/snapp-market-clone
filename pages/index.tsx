@@ -7,6 +7,7 @@ import ProductSlider from "./../components/Products/ProductSlider";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import MobileMenu from "../components/layout/MobileMenu";
+
 const Home: React.FC = () => {
   return (
     <>
@@ -73,6 +74,7 @@ const Home: React.FC = () => {
       <Footer/>
       <Navigation/>
       <MobileMenu/>
+      
     </>
   );
 };
