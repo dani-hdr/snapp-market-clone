@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <Header />
       <CartMenu />
       <Container>
-        <div className="flex flex-col gap-5">{children}</div>
+        <div className="flex flex-col  gap-5">{children}</div>
       </Container>
       <Footer />
       <MobileNav />

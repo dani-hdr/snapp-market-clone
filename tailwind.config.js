@@ -32,7 +32,11 @@ module.exports = {
     ],
   },
   theme: {
-    extend: {},
+    extend: {
+      screens:{
+        'xs':'370px'
+      }
+    },
     fontFamily: {
       sans: ["IRANSansWeb", "sans-serif"],
     },

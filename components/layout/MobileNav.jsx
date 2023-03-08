@@ -4,7 +4,7 @@ import { MenuContext } from "../../context/MenuContext";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiCategoryAlt } from "react-icons/bi";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from './../../context/CartContext';
 import { useSelector } from 'react-redux';
 
 

@@ -23,11 +23,11 @@ const CartMenu = () => {
       {isCartOpen && <Overlay onClick={() => toggleCart()} />}
       <Portal>
         <div
-          className={`fixed top-0 ${
+          className={`fixed top-0 h-full ${
             isCartOpen ? "left-0" : "-left-96"
           } z-50 transition-all`}
         >
-          <div className="flex flex-col  bg-white w-80 md:w-96 h-screen shadow-sm pb-4 ">
+          <div className="flex flex-col  bg-white w-80 h-screen md:w-96  shadow-sm pb-4 ">
             {/* basket info */}
             <div className="shadow-lg z-10 w-full  flex flex-col justify-center">
               {/* my basket */}

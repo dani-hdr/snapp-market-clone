@@ -18,7 +18,7 @@ const CategoryCoordian = () => {
   };
   return (
     <>
-      <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-4 lg:nth-child-3:bg-red-400  ">
+      <div className="grid justify-items-center   grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mt-4 lg:nth-child-3:bg-red-400  ">
         {categoryData.slice(0, visibleItems).map((data) => (
           <CategoryBox
             key={data.id}
