@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Header.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Header.jsx", "hooks/useAxios.js", "components/Products/ProductSilderPrimary.jsx", "pages/index.jsx", "components/Products/ProductItem.jsx", "components/Products/ProductSlider.jsx", "components/category/CategoryCoordian.jsx", "components/category/CategoryBox.jsx", "pages/_document.jsx", "components/layout/Container.jsx", "components/layout/DesktopMenu.jsx", "components/layout/Footer.jsx", "components/layout/Header.jsx", "components/layout/MobileNav.jsx", "components/layout/MobileMenu.jsx", "components/layout/Overlay.jsx", "components/UI/SearchInput.jsx", "components/UI/Banner.jsx", "context/MenuContext.jsx"],
   "exclude": ["node_modules"]
 }

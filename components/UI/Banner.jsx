@@ -1,11 +1,7 @@
 import Image from 'next/image';
 import React from 'react'
-interface Props {
-    imageUrl:string;
-    title:string;
-    link:string;
-}
-const Banner:React.FC<Props> = ({imageUrl,title,link}) => {
+
+const Banner = ({imageUrl,title,link}) => {
   return (
     <div className='hidden md:block'>
         <a title={title} href={link}>

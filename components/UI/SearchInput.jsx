@@ -1,6 +1,6 @@
 import React from 'react'
 import {BiSearch} from 'react-icons/bi'
-const SearchInput:React.FC = () => {
+const SearchInput = () => {
   return (
    
     <div className='flex items-center text-slate-600 text-sm bg-white py-2 px-4 rounded-full w-full md:w-5/12'>

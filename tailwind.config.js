@@ -6,6 +6,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   daisyui: {
+    rtl:true,
     themes: [
       {
         mytheme: {
@@ -33,7 +34,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["shabnam", "sans-serif"],
+      sans: ["IRANSansWeb", "sans-serif"],
     },
   },
   plugins: [require("daisyui")],

@@ -3,12 +3,13 @@ import Container from "./Container";
 import { MdLocalShipping } from "react-icons/md";
 import { TbDiscount2 } from "react-icons/tb";
 import { GiJigsawBox,GiBasket } from "react-icons/gi";
+import Image from "next/image";
 
 
 const Footer = () => {
   return (
   
-     <footer className="bg-white mt-7 py-6 min-h-screen pb-48 md:pb-4">
+     <footer className="bg-white mt-7 py-6 min-h-max pb-24 md:pb-2">
       <Container>
         {/* top footer */}
         <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-3">
@@ -58,31 +59,27 @@ const Footer = () => {
               مشاهده کنید
             </span>
             <div className="flex flex-wrap gap-2">
-              <img
+              <Image
+                width={200}
+                height={150}
                 className="h-12"
                 src="https://snapp.market/v2/static/images/bazzar.cb6ed78f.png"
+                alt=""
               />
-              <img
-                className="h-12"
-                src="https://snapp.market/v2/static/images/google-play.3e883a26.png"
-              />
-              <img
-                className="h-12"
-                src="https://snapp.market/v2/static/images/sibapp.13144cae.png"
-              />
-              <img
-                className="h-12"
-                src="https://snapp.market/v2/static/images/iapps.b73e78b6.png"
-              />
+            
             </div>
           </div>
-          <div className="flex hidden md:flex ">
-            <img
+          <div className=" hidden md:flex ">
+            <Image
+              width={300}
+              height={300}
               className="h-32 lg:h-52 -ml-16"
               src="https://snapp.market/v2/static/images/newMobile-2.84a4e251.png"
               alt=""
             />
-            <img
+            <Image
+              width={300}
+              height={300}
               className="h-32 lg:h-52"
               src="https://snapp.market/v2/static/images/newMobile-1.4a44f07a.png"
               alt=""
@@ -151,19 +148,19 @@ const Footer = () => {
             </div>
             <div className="flex justify-evenly  gap-2  col-span-full lg:col-span-1">
               <div className="border  w-1/6 lg:w-full  h-min   p-3 rounded-md shadow-md">
-                <img className="w-full"
+                <Image width={150} height={150} className="w-full"
                   src="https://snapp.market/v2/static/images/ecunion.70a7f898.png"
                   alt=""
                 />
               </div>
               <div className="border  w-1/6 lg:w-full  h-min  p-3 rounded-md shadow-md">
-                <img className="w-full"
+                <Image width={150} height={150} className="w-full"
                   src="https://snapp.market/v2/static/images/ecunion.70a7f898.png"
                   alt=""
                 />
               </div>
               <div className="border  w-1/6 lg:w-full  h-min  p-3 rounded-md shadow-md">
-                <img className="w-full"
+                <Image width={150} height={150} className="w-full"
                   src="https://snapp.market/v2/static/images/ecunion.70a7f898.png"
                   alt=""
                 />

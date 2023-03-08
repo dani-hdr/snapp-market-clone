@@ -4,20 +4,17 @@ import { Navigation } from "swiper";
 import { IoIosArrowBack } from "react-icons/io";
 import ProductItem from "./ProductItem";
 import "swiper/css";
-interface Props {
-  title: string;
-  productsUrl?: string;
-  showMoreUrl: string;
-}
-const ProductSlider = ({ title, productsUrl, showMoreUrl }: Props) => {
+import productsData from "../../mock/productsData";
+
+const ProductSlider = ({ title,category }) => {
   return (
     <div className="  border bg-white rounded-md">
       <div className="flex justify-between items-center p-4">
         <h3 className="text-slate-900  text-lg ">
-          <a href={showMoreUrl}>{title}</a>
+          <a href="#">{title}</a>
         </h3>
         <a
-          href={showMoreUrl}
+          href="#"
           className="text-blue-600 font-bold text-sm flex items-center gap-2 "
         >
           {" "}
@@ -32,25 +29,12 @@ const ProductSlider = ({ title, productsUrl, showMoreUrl }: Props) => {
        navigation={true}
        className="mySwiper"
       >
+        {productsData.filter(x=>x.category ===category ).map((product) => (
+          <SwiperSlide key={product.id}>
+            <ProductItem product={product} />
+          </SwiperSlide>
+        ))}
        
-        <SwiperSlide>
-          <ProductItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductItem />
-        </SwiperSlide>
       </Swiper>
     </div>
   );
