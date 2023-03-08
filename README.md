@@ -1,3 +1,4 @@
+This is a project inspired by [snapp market](https://snapp.market/) ecommerce website
 See the live demo [here](https://snapp-market-clone.vercel.app/) and give it a ⭐!
 
 ## Are you hiring?
