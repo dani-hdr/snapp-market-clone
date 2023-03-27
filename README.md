@@ -1,5 +1,5 @@
 This is a project inspired by [snapp market](https://snapp.market/) ecommerce website
-See the live demo [here]([https://snapp-market-clone.vercel.app/](https://job-finder-nine.vercel.app/) and give it a ⭐!
+See the live demo [here](https://snapp-market-clone.vercel.app/) and give it a ⭐!
 
 ## Are you hiring?
 I'm looking for an entry level job. If you've any opportunity, please let me know. 🙏
